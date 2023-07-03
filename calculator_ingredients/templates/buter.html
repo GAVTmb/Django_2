@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buter</title>
+</head>
+<body>
+    <a href="{% url 'main_page' %}"><button> <- НАЗАД </button></a>
+    <h1>Бутерброд</h1>
+    <img src="https://i.ytimg.com/vi/LM2IcSzIAAY/hqdefault.jpg" width="350px">
+    <h2>На одну порцию потребуется:</h2>
+
+    {% for ingredient, amount in buter.items %}
+    <h2>{{ ingredient }}: {{ amount }}</h2>
+    {% endfor %}
+
+</body>
+</html>

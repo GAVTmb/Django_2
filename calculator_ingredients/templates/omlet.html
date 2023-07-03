@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>omlet</title>
+</head>
+<body>
+
+    <a href="{% url 'main_page' %}"><button> <- НАЗАД </button></a><br>
+    <h1>Омлет</h1>
+    <img src="https://img.foto-receptik.ru/recipe/15/572/571001.jpg" width="350px">
+    <h2>На одну порцию потребуется:</h2>
+
+    {% for ingredient, amount in omlet.items %}
+    <h2>{{ ingredient }}: {{ amount }}</h2>
+    {% endfor %}
+
+</body>
+</html>

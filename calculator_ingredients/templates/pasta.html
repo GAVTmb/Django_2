@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pasta</title>
+</head>
+<body>
+    <a href="{% url 'main_page' %}"><button> <- НАЗАД </button></a>
+    <h1>Паста</h1>
+    <img src="https://umagazine.ru/upload/resize_cache/iblock/a55/650_1200_1/a55789a47b44439fcfbff6a962bb3d7f.jpg" width="350px">
+    <h2>На одну порцию потребуется:</h2>
+
+    {% for ingredient, amount in pasta.items %}
+    <h2>{{ ingredient }}: {{ amount }}</h2>
+    {% endfor %}
+
+</body>
+</html>
